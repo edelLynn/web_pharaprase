@@ -9,13 +9,12 @@ def tambah_daftar_isi_otomatis(doc):
     paragraph = doc.add_paragraph()
     run = paragraph.add_run()
     
-    # Bikin elemen XML untuk field 'TOC'
     fldChar = OxmlElement('w:fldChar')
     fldChar.set(qn('w:fldCharType'), 'begin')
     
     instrText = OxmlElement('w:instrText')
     instrText.set(qn('xml:space'), 'preserve')
-    # Perintah ke Word: "Bikin TOC dari Heading 1 sampai 3, kasih link, kasih nomor hal"
+    
     instrText.text = 'TOC \\o "1-3" \\h \\z \\u'
     
     fldChar2 = OxmlElement('w:fldChar')
@@ -76,7 +75,7 @@ def atur_margin(doc):
         section.page_width = Cm(21)
         section.page_height = Cm(29.7)
 
-# --- 6. BUAT FILE DUMMY (YANG DIPERBAIKI) ---
+# --- 6. BUAT FILE DUMMY ---
 def buat_file_dummy(nama_file):
     doc = Document()
     
