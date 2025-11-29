@@ -11,7 +11,7 @@ import os
 if "GROQ_API_KEY" in st.secrets:
     API_KEY = st.secrets["GROQ_API_KEY"]
 else:
-    API_KEY = "" # Kosongin kalau gak nemu
+    API_KEY = ""
 
 # Setup Client Groq
 client = None
