@@ -1,0 +1,8 @@
+# File: .gitignore
+.streamlit/secrets.toml
+__pycache__/
+*.pyc
+temp_*.docx
+hasil_*.docx
+cover/*.docx
+!cover/cover_unej.docx
